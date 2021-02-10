@@ -4,5 +4,9 @@
     "eslint.workingDirectories": [
         "./functions"
     ],
-    "prettier.singleQuote": true
+    "prettier.singleQuote": true,
+    // Default (format when you paste)
+    "editor.formatOnPaste": true,
+    // Default (format when you save)
+    "editor.formatOnSave": true,
 }
