@@ -1,4 +1,8 @@
 {
     "git.enableCommitSigning": true,
-    "git-graph.repository.sign.commits": true
+    "git-graph.repository.sign.commits": true,
+    "eslint.workingDirectories": [
+        "./functions"
+    ],
+    "prettier.singleQuote": true
 }

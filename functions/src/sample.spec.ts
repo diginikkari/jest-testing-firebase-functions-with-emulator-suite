@@ -50,7 +50,7 @@ describe('Sample tests', () => {
 
     // create sample context
     const context = {
-      timestamp: '2018-03-23T17:27:17.099Z'
+      timestamp: '2018-03-23T17:27:17.099Z',
     };
 
     // Execute the function
@@ -74,7 +74,7 @@ describe('Sample tests', () => {
 
     // create sample context
     const context = {
-      timestamp: '2018-03-23T17:27:17.099Z'
+      timestamp: '2018-03-23T17:27:17.099Z',
     };
 
     // Execute the function
@@ -84,7 +84,9 @@ describe('Sample tests', () => {
     const companyAfterCreate = companySnapshot.data() as Company;
 
     // Assert results
-    expect(companyAfterCreate.createdAt).toMatchObject(admin.firestore.Timestamp.fromDate(new Date(context.timestamp)));
+    expect(companyAfterCreate.createdAt).toMatchObject(
+      admin.firestore.Timestamp.fromDate(new Date(context.timestamp)),
+    );
   });
 
   test('it should increase companies count', async () => {
@@ -98,7 +100,7 @@ describe('Sample tests', () => {
 
     // create sample context
     const context = {
-      timestamp: '2018-03-23T17:27:17.099Z'
+      timestamp: '2018-03-23T17:27:17.099Z',
     };
 
     // Execute the function
@@ -109,7 +111,9 @@ describe('Sample tests', () => {
       .collection('counts')
       .doc('companies')
       .get();
-    const countsAfterCreate = countsDocSnapshot.data() as { totalCount: number };
+    const countsAfterCreate = countsDocSnapshot.data() as {
+      totalCount: number;
+    };
 
     // Assert results
     expect(countsAfterCreate.totalCount).toBe(1);
