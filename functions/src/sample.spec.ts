@@ -1,6 +1,6 @@
 import * as firebase from '@firebase/testing';
 import functions from 'firebase-functions-test';
-import * as admin from 'firebase-admin';
+import admin from 'firebase-admin';
 
 interface Company {
   name: string;
