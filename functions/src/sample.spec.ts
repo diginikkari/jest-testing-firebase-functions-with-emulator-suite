@@ -1,4 +1,3 @@
-import * as firebase from '@firebase/testing';
 import functions from 'firebase-functions-test';
 import admin from 'firebase-admin';
 
@@ -37,7 +36,7 @@ describe('Sample tests', () => {
 
   beforeEach(async () => {
     // Clean database before each test
-    await firebase.clearFirestoreData({ projectId });
+    await testEnv.firestore.clearFirestoreData({ projectId: projectId });
   });
 
   test('it should add lowercase name', async () => {
